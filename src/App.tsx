@@ -1,10 +1,16 @@
-import { Typography } from '@mui/material'
-import './App.css'
+import { Button, Container, Typography } from '@mui/material'
 
 import { FC } from 'react'
 
 const App: FC = () => {
-  return <Typography sx={{ fontWeight: 800 }}>App</Typography>
+  return (
+    <>
+      <Container>
+        <Typography>App</Typography>
+        <Button variant="outlined"> My button </Button>
+      </Container>
+    </>
+  )
 }
 
 export default App
