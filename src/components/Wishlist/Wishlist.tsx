@@ -8,9 +8,16 @@ const Wishlist: FC = () => {
     <Container>
       <MainBreadcrumbs currentTitle="Wishlist" />
 
+      {/* wishlist header */}
+
       <Typography variant="h1" component={'h1'} sx={{ margin: '10px 0' }}>
         Wishlist
       </Typography>
+      <Typography variant="caption" component={'p'} marginBottom={'20px'}>
+        158 products
+      </Typography>
+
+      {/* categories */}
     </Container>
   )
 }
