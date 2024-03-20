@@ -1,16 +1,8 @@
-import { Button, Container, Typography } from '@mui/material'
-
 import { FC } from 'react'
+import Wishlist from './components/Wishlist/Wishlist'
 
 const App: FC = () => {
-  return (
-    <>
-      <Container>
-        <Typography>App</Typography>
-        <Button variant="outlined"> My button </Button>
-      </Container>
-    </>
-  )
+  return <Wishlist />
 }
 
 export default App

@@ -7,4 +7,7 @@ export const palette: PaletteOptions = {
   common: {
     black: '#303031',
   },
+  text: {
+    secondary: '#999999',
+  },
 }
