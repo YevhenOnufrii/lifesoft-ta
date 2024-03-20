@@ -1,10 +1,8 @@
-import { Typography } from '@mui/material'
-import './App.css'
-
 import { FC } from 'react'
+import Wishlist from './components/Wishlist/Wishlist'
 
 const App: FC = () => {
-  return <Typography sx={{ fontWeight: 800 }}>App</Typography>
+  return <Wishlist />
 }
 
 export default App
