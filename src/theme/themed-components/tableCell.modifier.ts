@@ -8,12 +8,18 @@ declare module '@mui/material/TableCell' {
 
 export const MuiTableCell: Components<Theme>['MuiTableCell'] = {
   styleOverrides: {
-    root: () => ({
+    root: ({ theme }) => ({
       textAlign: 'center',
       maxWidth: '600px',
-      padding: '3.5px 10px',
-      lineHeight: 1,
-      margin: 0,
+      padding: '3.5px 5px',
+      textWrap: 'nowrap',
+
+      [theme.breakpoints.up('md')]: {
+        padding: '3.5px 8px',
+      },
+      [theme.breakpoints.up('lg')]: {
+        padding: '3.5px 10px',
+      },
     }),
   },
 
@@ -22,6 +28,7 @@ export const MuiTableCell: Components<Theme>['MuiTableCell'] = {
       props: { variant: 'boldDesc' },
       style: () => ({
         fontWeight: 700,
+        textWrap: 'wrap',
       }),
     },
   ],

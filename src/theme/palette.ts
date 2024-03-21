@@ -3,6 +3,7 @@ import { PaletteOptions } from '@mui/material'
 type ButtonsBG = {
   default: string
   selected: string
+  borderGray: string
 }
 
 declare module '@mui/material/styles' {
@@ -28,6 +29,7 @@ export const palette: PaletteOptions = {
   buttonsBG: {
     default: '#e9ebef',
     selected: '#b2bac7',
+    borderGray: '#E9EBEF',
   },
   secondary: {
     main: '#405EFF',
