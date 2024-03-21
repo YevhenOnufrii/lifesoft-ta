@@ -29,4 +29,7 @@ export const palette: PaletteOptions = {
     default: '#e9ebef',
     selected: '#b2bac7',
   },
+  secondary: {
+    main: '#405EFF',
+  },
 }

@@ -46,6 +46,9 @@ const Wishlist: FC = () => {
               deleteCategory={deleteCategory}
             />
           ))}
+        <Button variant="outlined" sx={{ width: 200, marginLeft: 'auto' }}>
+          New category
+        </Button>
       </Stack>
     </Container>
   )
@@ -60,7 +63,7 @@ const CustomDeleteIcon = styled(DeleteIcon)<IconProps>(({ theme }) => ({
   fontSize: '24px',
   marginLeft: '-4px',
   '&:active': {
-    color: 'red',
+    color: theme.palette.error.main,
   },
 }))
 
@@ -78,26 +81,25 @@ const CategoryBtn: FC<CategoryBtnProps> = ({
 }) => {
   const isSelected = selectedCategory === title
   return (
-    <Box>
-      <Button
-        variant="category"
-        sx={{
-          bgcolor: theme => isSelected && theme.palette.buttonsBG.selected,
-          color: theme => isSelected && theme.palette.common.white,
-        }}
-        onClick={() => onClick(title)}
-        endIcon={
-          <CustomDeleteIcon
-            onClick={e => {
-              e.stopPropagation()
-              deleteCategory(title)
-            }}
-            sx={{ color: theme => isSelected && theme.palette.common.white }}
-          />
-        }
-      >
-        {title}
-      </Button>
-    </Box>
+    <Button
+      variant="category"
+      sx={{
+        bgcolor: theme => isSelected && theme.palette.buttonsBG.selected,
+        color: theme => isSelected && theme.palette.common.white,
+        flexGrow: 0,
+      }}
+      onClick={() => onClick(title)}
+      endIcon={
+        <CustomDeleteIcon
+          onClick={e => {
+            e.stopPropagation()
+            deleteCategory(title)
+          }}
+          sx={{ color: theme => isSelected && theme.palette.common.white }}
+        />
+      }
+    >
+      {title}
+    </Button>
   )
 }
