@@ -11,8 +11,8 @@ import {
 } from '@mui/material'
 import { FC, useState } from 'react'
 
-import ProductCard from './ProductCard'
 import { Data } from '../../../types'
+import ProductCard from './ProductCard'
 
 type ProductsListProps = {
   data: Data
@@ -26,12 +26,10 @@ const ProductsList: FC<ProductsListProps> = ({ data, image, setData }) => {
   const handleChangeDense = () => {
     setDense(!dense)
   }
-
   const deleteProduct = (id: number) => {
     const updateData = data.filter(product => product.id !== id)
     setData([...updateData])
   }
-
   const addFavorite = (id: number) => {
     const manageList = data.reduce((acc, prod) => {
       if (prod.id === id) {
@@ -53,6 +51,7 @@ const ProductsList: FC<ProductsListProps> = ({ data, image, setData }) => {
         overflow: 'hidden',
         boxShadow: 'none',
         bgcolor: 'transparent',
+        marginBottom: '26px',
       }}
     >
       <TableContainer sx={{ maxHeight: '500px' }}>

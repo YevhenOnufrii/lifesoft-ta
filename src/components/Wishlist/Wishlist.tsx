@@ -9,6 +9,8 @@ import ProductsList from './parts/ProductsList'
 import image from '../../assets/powerBank.jpg'
 import useWishList from './parts/useWishlist'
 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+
 const Wishlist: FC = () => {
   const {
     categories,
@@ -63,6 +65,21 @@ const Wishlist: FC = () => {
       />
 
       <ProductsList image={image} data={data} setData={setData} />
+
+      <Stack direction={'row'} justifyContent={'space-between'} flexWrap={'wrap'}>
+        <Button variant="goBack" startIcon={<ArrowBackIcon color="secondary" />}>
+          Go back
+        </Button>
+
+        <Stack direction={'row'} spacing={2.5}>
+          <Button variant="outlined" sx={{ width: '300px' }}>
+            Add product
+          </Button>
+          <Button variant="contained" sx={{ width: '300px' }}>
+            Add to card
+          </Button>
+        </Stack>
+      </Stack>
     </Container>
   )
 }
