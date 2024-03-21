@@ -1,5 +1,21 @@
 import { PaletteOptions } from '@mui/material'
 
+type ButtonsBG = {
+  default: string
+  selected: string
+  borderGray: string
+}
+
+declare module '@mui/material/styles' {
+  interface Palette {
+    buttonsBG: ButtonsBG
+  }
+
+  interface PaletteOptions {
+    buttonsBG: ButtonsBG
+  }
+}
+
 export const palette: PaletteOptions = {
   background: {
     default: '#F6F7F9',
@@ -9,5 +25,13 @@ export const palette: PaletteOptions = {
   },
   text: {
     secondary: '#999999',
+  },
+  buttonsBG: {
+    default: '#e9ebef',
+    selected: '#b2bac7',
+    borderGray: '#E9EBEF',
+  },
+  secondary: {
+    main: '#405EFF',
   },
 }
