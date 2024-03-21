@@ -1,5 +1,4 @@
-import { FC, useState } from 'react'
-import { Product } from '../../types'
+import { FC } from 'react'
 
 import { Button, Container, Stack, Typography } from '@mui/material'
 import MainBreadcrumbs from '../Common/MainBreadcrumbs'
@@ -7,7 +6,6 @@ import AddCategoryDialog from './parts/AddCategoryDialog'
 import CategoryBtn from './parts/CategoryBtn'
 import ProductsList from './parts/ProductsList'
 
-import initData from '../../assets/data.json'
 import image from '../../assets/powerBank.jpg'
 import useWishList from './parts/useWishlist'
 
@@ -38,7 +36,7 @@ const Wishlist: FC = () => {
       </Typography>
 
       {/* categories */}
-      <Stack sx={{ flexDirection: 'row', gap: '20px', marginBottom: '20px' }}>
+      <Stack sx={{ flexDirection: 'row', gap: '20px', marginBottom: '20px', flexWrap: 'wrap' }}>
         {categories.list &&
           categories.list.map((category, idx) => (
             <CategoryBtn
